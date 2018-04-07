@@ -5,9 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon --exec DEBUG=app node app.js",
+    "dev": "DEBUG=app:*  nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    ""
+    "lint": "eslint app.js --fix"
   },
   "author": "",
   "license": "ISC",
@@ -15,11 +15,28 @@
     "bootstrap": "3.3.7",
     "chalk": "2.3.2",
     "debug": "3.1.0",
+    "ejs": "2.5.8",
     "express": "4.16.3",
     "jquery": "3.3.1",
-    "morgan": "1.9.0"
+    "morgan": "1.9.0",
+    "mssql": "4.1.0",
+    "pug": "2.0.3"
   },
   "devDependencies": {
+    "eslint": "4.19.1",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-plugin-import": "2.10.0",
     "nodemon": "1.17.3"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "DEVELOPMENT",
+      "PORT": 4000
+    }
   }
 }
