@@ -9,10 +9,10 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const config = {
-  user: 'bmulobi',
+  user: 'zaga',
   password: 'arant1it',
-  server: 'bmulobiserver.database.windows.net', // You can use 'localhost\\instance' to connect to named instance
-  database: 'testdb',
+  server: 'zigi', // You can use 'localhost\\instance' to connect to named instance
+  database: 'zogo',
   options: {
     encrypt: true, // Use this if you're on Windows Azure
   },
